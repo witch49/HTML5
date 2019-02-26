@@ -1,0 +1,48 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+#bodycontent {
+  /* nav 와 section 높이 맞추기 */
+  display: flex;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  color: blue;
+  text-shadow: 3px 3px 3px skyblue;
+}
+a {
+  color: blue;
+  text-decoration: none;
+}
+p {
+  font-size: 1em;
+  font-family: Times New Roman, "휴먼 편지체", serif;
+}
+
+header {
+  height: 15%;
+  background: yellow;
+}
+nav {
+  width: 15%;
+  clear: both;
+  padding-bottom: 100%;
+  /*padding-bottom: 110%;*/
+  float: left;
+  background: orange;
+
+}
+section {
+  width: 85%;
+  float: left;
+  background: skyblue;
+}
+
+footer {
+  clear: both;
+  /*border-radius: 20px 20px 20px 20px;*/
+  background: plum;
+}

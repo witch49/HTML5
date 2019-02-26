@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 15%;
+  background: yellow;
+}
+h1 {
+  text-align: center;
+}
+p, .content {
+  font-size: 1em;
+  /* text-indent: 1em; */
+  font-family: Times New Roman, "휴먼 편지체", serif;
+}
+strong {
+  font-size: 1.1em;
+  color: blue;
+}
+section {
+  margin: 20px;
+  background: pink;
+}
+body {
+  height: 70%;
+}
+footer {
+  height: 15%;
+  background: plum;
+}

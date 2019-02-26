@@ -1,0 +1,28 @@
+h1 {
+  color: brown;
+  text-align: center;
+}
+header > hr {
+  border: 0;
+  height: 1px;
+  background: black;
+}
+p, .content {
+  font-size: 1em;
+  /* text-indent: 1em; */
+  font-family: Times New Roman, "휴먼 편지체", serif;
+}
+strong {
+  font-size: 1.1em;
+  color: blue;
+}
+section {
+  background: pink;
+}
+body {
+  background: aliceblue;
+}
+footer {
+  border-radius: 20px 20px 20px 20px;
+  background: orange;
+}

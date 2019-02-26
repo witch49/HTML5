@@ -1,0 +1,17 @@
+h3 {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  text-align: center;
+}
+.naver:hover {
+  box-shadow: 5px 5px violet;
+}
+.chosun:hover {
+  box-shadow: 3px 3px 3px skyblue;
+}
+.amazon:hover {
+  box-shadow: 0px 0px 5px darkblue;
+}
+td, tr {
+  padding : 2px;
+}

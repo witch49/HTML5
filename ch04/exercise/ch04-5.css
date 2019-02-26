@@ -1,0 +1,24 @@
+#center {
+text-align: center;
+}
+.main {
+  background-color: skyblue;
+}
+.indent {
+  text-indent: 3em;
+  text-align: justify;
+}
+h3 {
+  font-size: 25px;
+  color: green;
+}
+em {
+  color: green;
+}
+div > p > strong {
+  color: red;
+}
+div > strong {
+  color: blue;
+  background: yellow;
+}

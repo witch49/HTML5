@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="survey4.css">
+  <title>소프트웨어 기술 설문지</title>
+</head>
+
+<body>
+  <header>
+    <h1>설문지</h1>
+  </header>
+  <nav>
+    <p>소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.</p>
+    <hr>
+  </nav>
+
+  <section>
+    <article>
+      <strong>학년</strong>
+      <span class="content">
+        <input type="radio" name="grade" value="1"> 1학년
+        <input type="radio" name="grade" value="2"> 2학년
+        <input type="radio" name="grade" value="3"> 3학년
+        <input type="radio" name="grade" value="4"> 4학년
+      </span>
+    </article>
+    <br>
+    <article>
+      <strong>성별</strong>
+      <span class="content">
+        <input type="radio" name="sex" value="1">남
+        <input type="radio" name="sex" value="2">여
+      </span>
+    </article>
+    <br>
+    <article>
+      <strong>관심 분야</strong>
+      <select name="software">
+        <option value="1" selected>모바일 소프트웨어</option>
+        <option value="2">시스템 소프트웨어</option>
+        <option value="3">응용 프로그램</option>
+        <option value="4">소프트웨어 공학</option>
+        <option value="5">운영 체제</option>
+      </select>
+    </article>
+    <br>
+    <article>
+      <strong>진로</strong>
+      <span class="content">
+        <input type="checkbox" value="1">개발
+        <input type="checkbox" value="2">기획
+        <input type="checkbox" value="3">영업
+        <input type="checkbox" value="4">창업
+      </span>
+    </article>
+    <br>
+    <article>
+      <strong>남기고 싶은 말</strong><br>
+      <textarea rows="10" cols="70" placeholder="글을 남겨주세요"></textarea>
+    </article>
+  </section>
+  <br>
+  <footer>Copyright 2017 by Kitae</footer>
+</body>
+
+</html>
