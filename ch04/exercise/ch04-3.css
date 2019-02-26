@@ -1,0 +1,28 @@
+thead {
+  text-align: center;
+  font-weight: bold;
+}
+.div1 {
+  background: #A52A2A;
+  color:#A52A2A;
+}
+.div2 {
+  background: #00BFFF;
+  color:#00BFFF;
+}
+.div3 {
+  background: #8A2BE2;
+  color:#8A2BE2;
+}
+.div4 {
+  background: #FFD700;
+  color:#FFD700;
+}
+.div5 {
+  background: #FF8C00;
+  color:#FF8C00;
+}
+.div6 {
+  background: #6B8E23;
+  color:#6B8E23;
+}
