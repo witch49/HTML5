@@ -1,0 +1,58 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  color: blue;
+  text-shadow: 3px 3px 3px skyblue;
+}
+
+p {
+  font-size: 1em;
+  font-family: Times New Roman, "휴먼 편지체", serif;
+}
+
+/*Sidebar*/
+#sidebar-wrapper {
+  z-index: 1;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  overflow-y: hidden;
+  background: #2c3e50;
+  border: 2px solid red;
+  opacity: 0.9;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/*sider styling*/
+.sidebar-nav {
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #ddd;
+}
+
+.sidebar-nav li a:hover {
+  background: #16a085;
+}
+
+/*Main Content*/
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+  border: 5px solid green;
+}
