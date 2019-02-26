@@ -1,0 +1,14 @@
+tr, td {
+  padding: 1px;
+}
+.number {
+  border: 1px solid green;
+}
+.title {
+  font-weight: bold;
+  width: 200px;
+  border-bottom: 1px solid gray;
+}
+.play:hover, .stop:hover {
+  color: magenta;
+}

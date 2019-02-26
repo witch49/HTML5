@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ch05 6번 (1)</title>
+  <style>
+    @keyframes sponge {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    #tran {
+      animation-name: sponge;
+      animation-duration: 1s;  /* 애니메이션 1회 시간은 1초 */
+      animation-iteration-count: infinite;  /* 무한 반복 */
+    }
+  </style>
+</head>
+<body>
+  <h3>어지러워요</h3>
+  <hr><br>
+  <img id="tran" src="media/spongebob.png" width="150px" height="150px">
+</body>
+</html>
