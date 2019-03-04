@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>기본 구조를 가진 표 만들기</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    thead, tfoot {
+      background: darkgray;
+      color: yellow;
+    }
+    th {
+      height: 40px;
+      width: 100px;
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid gray;
+    }
+    td {
+      height: 20px;
+      width: 100px;
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid gray;
+    }
+    tbody tr:nth-child(even) {
+      background: aliceblue;
+    }
+    tbody tr:hover {
+      background: pink;
+    }
+  </style>
+</head>
+<body>
+  <h3>1학기 성적</h3>
+  <hr>
+  <table>
+    <thead>
+      <tr>
+        <th>이름</th>
+        <th>HTML</th>
+        <th>CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>황기태</td>
+        <td>80</td>
+        <td>70</td>
+      </tr>
+      <tr>
+        <td>이재문</td>
+        <td>95</td>
+        <td>99</td>
+      </tr>
+      <tr>
+        <td>이병은</td>
+        <td>85</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>김남윤</td>
+        <td>50</td>
+        <td>40</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>합</th>
+        <th>310</th>
+        <th>249</th>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
