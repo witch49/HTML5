@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ch07 5번</title>
+</head>
+<body>
+  <h3>문자열 배열 다루기</h3>
+  <hr>
+  <script>
+    var names = new Array("wonsun", "jaemoonlee", "kitae", "gracehwang");
+    var temp;
+    document.write("이름 : ");
+    for (var i=0; i<4; i++)
+      document.write(names[i] + "&nbsp;");
+
+    document.write("<br>가장 긴 이름 : ");
+    for (var i=0; i<3; i++) {
+      if (names[i].length > names[i+1].length)
+        temp = names[i];
+    }
+    document.write(temp);
+
+    document.write("<br>가장 먼저 나오는 이름 : ");
+    names.sort();
+    document.write(names[0] + "&nbsp;");
+
+    document.write("<br>증가순 이름 : ");
+    for (var i=0; i<4; i++)
+      document.write(names[i] + "&nbsp;");
+  </script>
+</body>
+</html>

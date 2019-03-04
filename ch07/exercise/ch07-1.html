@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ch07 1번</title>
+</head>
+<body>
+  <h3>난수 10개 생성</h3>
+  <hr>
+  <script>
+    // var n = [];
+    var plot = [];
+    /* 난수 10개를 배열에 저장 */
+    for (var i=0; i<10; i++) {
+      plot[i] = Math.floor(Math.random()*100);
+    }
+    /* 배열 출력 */
+    for (var i=0; i<10; i++) {
+      document.write(plot[i] + "&nbsp;");
+    }
+    document.write("<hr>");
+    /* big 에 가장 큰 수 저장 */
+    var big = [];
+    /* 가장 큰 수 찾기 */
+    for (var i=0; i<10; i++) {
+      if (big <= plot[i])
+        big = plot[i];
+    }
+    document.write("제일 큰 수는 : " + big + "<hr>");
+    /* 배열 정렬 */
+    plot.sort();
+    /* 배열 출력 */
+    for (var i=0; i<10; i++) {
+      document.write(plot[i] + "&nbsp;");
+    }
+  </script>
+</body>
+</html>
