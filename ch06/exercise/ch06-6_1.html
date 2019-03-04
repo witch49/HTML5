@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ch06 6번 (1)</title>
+</head>
+
+<body>
+  <script>
+    function big(i, j) {
+      var i = parseInt(i);
+      var j = parseInt(j);
+      if ((i - j) > 0)
+        return i;
+      else if ((i - j) < 0)
+        return j;
+      else {
+        return 0;
+      }
+    }
+  </script>
+  <script>
+    var b = big("625", "555");
+    document.write("큰 수 = " + b);
+  </script>
+</body>
+
+</html>

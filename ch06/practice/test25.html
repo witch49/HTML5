@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>함수</title>
+  <script>
+    function sum(init, final, inc) {
+      var total = 0;
+      for (var i = init; i <= final; i += inc) {
+        total += i;
+      }
+      return total;
+    }
+  </script>
+</head>
+
+<body>
+  <h3>함수 sum()</h3>
+  <hr>
+  <script>
+    var sum1 = sum(1, 1000, 1);
+    var sum2 = sum(1, 1000, 2);
+    var sum3 = sum(2, 1000, 2);
+    var sum4 = sum(3, 1000, 3);  // 3의 배수의 1000까지의 합
+    document.write(sum1 + ", " + sum2 + ", " + sum3 + ", " + sum4);
+  </script>
+</body>
+
+</html>
