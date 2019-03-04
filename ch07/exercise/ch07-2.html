@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ch07 2번</title>
+</head>
+<body>
+  <h3>정수 5개 입력받아 역순으로 출력</h3>
+  <hr>
+  <script>
+    // var sortReverse = [5];
+    //var temp;
+    var input = prompt("정수 입력(5개)", "21,51,13,91,39");
+    document.write("입력된 수의 배열<br>");
+    var sub = input.split(",");
+    for (var i=0; i<5; i++)
+      document.write(sub[i]+ "&nbsp;");
+    document.write("<hr>역순으로 재정렬된 배열<br>");
+    sub.sort();
+    sub.reverse();
+    for (var i=0; i<5; i++)
+      document.write(sub[i]+ "&nbsp;");
+  </script>
+</body>
+</html>
