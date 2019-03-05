@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ch08 8번</title>
+</head>
+
+<body>
+  <h3>클릭하면 2,3,4배 옆으로 늘어납니다</h3>
+  <hr><br>
+  <img id="tra" src="media/spongebob.png" width="150px" height="150px" onclick="trans()">
+  <script>
+    function trans() {
+      var obj = document.getElementById("tra");
+      if (obj.style.transform == "scaleX(2)")
+        obj.style.transform = "scaleX(3)";
+      else if (obj.style.transform == "scaleX(3)")
+        obj.style.transform = "scaleX(4)";
+      else if (obj.style.transform == "scaleX(4)")
+        obj.style.transform = "scaleX(1)";
+      else
+        obj.style.transform = "scaleX(2)";
+    }
+  </script>
+</body>
+
+</html>

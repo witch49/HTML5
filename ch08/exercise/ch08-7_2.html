@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ch08 7번 (2)</title>
+
+</head>
+
+<body>
+  <h3>클릭하면 90도 회전합니다.</h3>
+  <hr><br>
+  <img id="tra" src="media/spongebob.png" width="150px" height="150px" onclick="trans()">
+  <script>
+    function trans() {
+      var obj = document.getElementById("tra");
+      if (obj.style.transform == "rotate(0deg)")
+        obj.style.transform = "rotate(90deg)";
+      else if (obj.style.transform == "rotate(90deg)")
+        obj.style.transform = "rotate(180deg)"
+      else if (obj.style.transform == "rotate(180deg)")
+        obj.style.transform = "rotate(270deg)"
+      else
+        obj.style.transform = "rotate(0deg)"
+    }
+  </script>
+</body>
+
+</html>
