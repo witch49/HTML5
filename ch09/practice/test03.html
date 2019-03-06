@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>addEventListener()를 이용한 리스너 등록</title>
+  <script>
+  var p;
+    function init() {
+      p = document.getElementById("p");
+      p.addEventListener("mouseover", over);
+      p.addEventListener("mouseout", out);
+    }
+    function over() {
+      p.style.backgroundColor = "orchid";
+    }
+    function out() {
+      p.style.backgroundColor = "white";
+    }
+  </script>
+</head>
+<body onload="init()">
+  <h3>addEventListener()를 이용한 리스너 등록</h3>
+  <hr>
+  <p id="p">마우스를 올리면 orchid 색으로 변경</p>
+</body>
+</html>
