@@ -7,30 +7,19 @@
   <title>Ch09 3번</title>
   <script>
     function calc(e) {
-    //  var code = e.which?e.which:event.keyCode;
-      var exp = document.getElementById("exp");
-      var result = document.getElementById("result");
-    //  if (e.keyCode == 13) {
-    //    result.value = eval(exp.value);
-    //  }
-      var x = e.keyCode;
-      if(x == 13) { // enter 키 입력
-      //	result.value = eval(exp.value);
-        //result.innerHTML = eval(exp.value);
-        alert("1");
-      	//return false;
+      if (e.keyCode == 13) { // enter 키 입력
+        var exp = document.getElementById("exp");
+        var result = document.getElementById("result");
+      	result.value = eval(exp.value);
     	}
-
-
-
     }
   </script>
 </head>
 <body>
   <h3>계산기 만들기</h3>
   <hr>
-  <p>수식을 입력하고 Enter 를 입력하세요.</p>
-  식 <input id="exp" type="text" onkeydown="calc(e)"><br>
+  <p>수식을 입력하고 &lt;Enter&gt;를 입력하세요.</p>
+  식 <input id="exp" type="text" onkeydown="calc(event)"><br>
   값 <input id="result" type="text">
 </body>
 </html>
