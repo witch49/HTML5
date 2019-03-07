@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ch10 6번</title>
+  <style>
+    div {
+      width: 150px;
+      height: 25px;
+      background-color: rgb(200, 250, 250);
+    }
+  </style>
+  <script>
+    var myVar = setInterval(startTime, 1000);
+    var handle = 0;
+
+    function startTime() {
+        var d = new Date();
+        var t = d.toLocaleTimeString();
+        document.getElementById("txt").innerHTML = t;
+        return;
+    }
+
+    function resetTime() {
+      if (handle == 1) {  // 시계가 멈춰있는 경우
+        handle = 0;
+        myVar = setInterval(startTime, 1000);
+        startTime();
+      } else {
+      clearInterval(myVar);  // 시계 멈추기. 등록한 함수 해제
+      document.getElementById("txt").innerHTML += " &nbsp;&nbsp;중지";
+      handle = 1;
+      }
+    }
+  </script>
+</head>
+
+<body onload="startTime()">
+  <h3>div 태그에 시계 만들기</h3>
+  <hr>
+  <div id="txt" onclick="resetTime()"></div>
+</body>
+
+</html>
