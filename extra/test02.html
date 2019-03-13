@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제이쿼리 코드 실행</title>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      msg1();
+      $("#id1").click(function() {  msg2(); });
+    });
+    function msg1() {
+      alert("msg1() 문서 로드 후 자동으로 경고 창을 출력합니다.");
+    }
+    function msg2() {
+      $("#id2").css("background", "silver");
+      $("#id2").text("msg2() : HTML 문서 변경되었습니다.");
+    }
+  </script>
+</head>
+<body>
+  <button id="id1">선택하면 메시지 변경</button>
+  <br><br>
+  <div id="id2">메시지 : </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+    body * {
+      margin: 5px;
+      padding: 5px;
+      border: solid thin gray;
+    }
+    * {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      //$("*").css("border-style", "hidden");
+      //$(".class1").css("border", "solid thick green");
+      //$("#p3").css({'background-color':'purple', 'color': 'white'});
+
+      // $("#p1 + p").css("border-style", "hidden");
+      // $("#p2 ~ p").css("border", "dashed thick red");
+      // $("div div").css("border", "solid thick green");
+      // $("div span").css({'background-color':'purple', 'color': 'white'});
+
+      // $("p[class]").css("border-style", "hidden");
+      // $("*[id*='2']").css("border", "dashed thick red");
+      // $("*[class^='c']").css("border", "solid thick green");
+      // $("p[id$='2']").css({'background-color':'purple', 'color': 'white'});
+
+      // $("div:first").css("border-style", "hidden");
+      // $("p:even").css("border", "dashed thick red");
+      // $("span:eq(1)").css("border", "solid thick green");
+      // $("p:lt(1)").css({'background-color':'purple', 'color': 'white'});
+
+      $("div:first-child").css("border-style", "hidden");
+      $("p:nth-child(odd)").css("border", "dashed thick red");
+      $("p:nth-child(3n+1)").css("border", "solid thick green");
+      $("*:only-child").css({'background-color':'purple', 'color': 'white'});
+    });
+  </script>
+</head>
+<body>
+  <section data-role="page">
+    <section data-role="header" data-theme="b">
+      <h1>jQuery 선택자</h1>
+    </section>
+    <div id="div0">div0
+      <div id="div1">div1
+        <span id="span1">span1</span>
+        <span id="span2">span2</span>
+        <span id="span3">span3</span>
+        <span>span4</span>
+      </div>
+      <div id="div2">div2
+        <p id="p1">p1</p>
+        <p id="p2" class="class1 class2">p2 class1 class2</p>
+        <p id="p3" class="class1">p3 class1</p>
+        <p id="p4">p4</p>
+      </div>
+      <div id="div3" class="class2">div3 class2</div>
+      <p>p</p>
+      <p></p>
+    </div>
+  </section>
+</body>
+</html>
