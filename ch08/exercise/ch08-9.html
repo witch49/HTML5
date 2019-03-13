@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ch08 9번</title>
+</head>
+<body>
+  <h3>라면을 끓이는 순서</h3>
+  <hr>
+  <ol type="A" style="background-color:yellowgreen" onclick="insert()" id="parent">
+    <li>물을 끓인다.</li>
+  </ol>
+  <script>
+    function insert() {
+      var obj = document.getElementById("parent");
+      var input = prompt("라면을 끓이는 순서를 입력하세요.", "봉지에서 라면을 미리 꺼내놓는다.");
+      var newLI = document.createElement("li");
+      newLI.innerHTML = input;
+      obj.appendChild(newLI);
+    }
+  </script>
+</body>
+</html>

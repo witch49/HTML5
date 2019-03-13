@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ch08 10번</title>
+  <script>
+    function addAnswer(obj, text) {
+      var obj = document.getElementById("parent");
+      var x = document.getElementsByTagName("span");
+      var newDIV = document.createElement("div");
+      newDIV.innerHTML = text;
+      if (text == "백설공주") { // 첫 번째 질문
+        if (x[0].hasChildNodes()) // 자식을 갖고 있는 경우
+          x[0].removeChild(x[0].childNodes[0]); // 첫번째 자식 제거
+        else
+          x[0].appendChild(newDIV);
+      } else if (text == "둘 다") { // 두 번째 질문
+        if (x[1].hasChildNodes())
+          x[1].removeChild(x[1].childNodes[0]);
+        else
+          x[1].appendChild(newDIV);
+      } else
+        exit();
+    }
+  </script>
+</head>
+
+<body id="parent">
+  <h3>정답의 동적 삽입</h3>
+  <hr>
+  <div>
+    <p>Q. 거울아 거울아 세상에서 누가 제일 예쁘니?</p>
+    <button onclick="addAnswer(this, '백설공주')">정답 보기</button><span></span>
+  </div>
+  <div>
+    <p>Q. 죽느냐 사느냐 어떤 것이 문제인가?</p>
+    <button onclick="addAnswer(this, '둘 다')">정답 보기</button><span></span>
+  </div>
+</body>
+
+</html>
