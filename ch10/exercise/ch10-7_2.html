@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ch10 7번 (2)</title>
+  <script>
+    var expression = ["+", "-", "*", "/"];
+    var math0, math1, math2, math3;  // +-*/ 인덱스에 쓸 변수
+    var a, b, c, d, e, f, g, h;  // 변수 8개
+    var correct1, correct2, correct3, correct4;  // 정답 4개
+
+     function makeQuiz() {
+      math0 = Math.floor(Math.random()*4); // 0~3 사이의 정수
+      math1 = Math.floor(Math.random()*4);
+      math2 = Math.floor(Math.random()*4);
+      math3 = Math.floor(Math.random()*4);
+
+      a = Math.floor(Math.random()*19)+1;  //1~20 사이의 정수
+      b = Math.floor(Math.random()*19)+1;
+      c = Math.floor(Math.random()*19)+1;
+      d = Math.floor(Math.random()*19)+1;
+      e = Math.floor(Math.random()*19)+1;
+      f = Math.floor(Math.random()*19)+1;
+      g = Math.floor(Math.random()*19)+1;
+      h = Math.floor(Math.random()*19)+1;
+
+      document.getElementById("exp1").innerHTML = a + expression[math0] + b;
+      document.getElementById("exp2").innerHTML = c + expression[math1] + d;
+      document.getElementById("exp3").innerHTML = e + expression[math2] + f;
+      document.getElementById("exp4").innerHTML = g + expression[math3] + h;
+
+      correct1 = eval(a + expression[math0] + b); // 수식1의 정답
+      correct2 = eval(c + expression[math1] + d);
+      correct3 = eval(e + expression[math2] + f);
+      correct4 = eval(g + expression[math3] + h);
+
+    }
+
+    function check() {
+      var count = 0;
+      if (document.getElementById("ans1").value == correct1)
+        count++;
+      else
+        document.getElementById("exp1").style.textDecoration = "line-through";
+
+      if (document.getElementById("ans2").value == correct2)
+        count++;
+      else
+        document.getElementById("exp2").style.textDecoration = "line-through";
+
+      if (document.getElementById("ans3").value == correct3)
+        count++;
+      else
+        document.getElementById("exp3").style.textDecoration = "line-through";
+
+      if (document.getElementById("ans4").value == correct4)
+        count++;
+      else
+        document.getElementById("exp4").style.textDecoration = "line-through";
+
+      document.getElementById("result").innerHTML = count;
+    }
+
+    function reset() {
+      makeQuiz();
+      document.getElementById("ans1").value = null;
+      document.getElementById("ans2").value = null;
+      document.getElementById("ans3").value = null;
+      document.getElementById("ans4").value = null;
+      document.getElementById("exp1").style.textDecoration = "none";
+      document.getElementById("exp2").style.textDecoration = "none";
+      document.getElementById("exp3").style.textDecoration = "none";
+      document.getElementById("exp4").style.textDecoration = "none";
+      document.getElementById("result").innerHTML = null;
+    }
+  </script>
+</head>
+<body onload="makeQuiz()">
+  <h3>산수 문제를 풀어 봅시다.</h3>
+  자동으로 문제가 만들어집니다. 답 입력 후 채점 버튼을 누르세요. 다시 버튼을 누르면 새로운 문제가 출력됩니다. 나누기 결과는 정수입니다.
+  <hr>
+  <table>
+    <tr>
+      <td id="exp1"></td>
+      <td><input id="ans1" type="text"></td>
+    </tr>
+    <tr>
+      <td id="exp2"></td>
+      <td><input id="ans2" type="text"></td>
+    </tr>
+    <tr>
+      <td id="exp3"></td>
+      <td><input id="ans3" type="text"></td>
+    </tr>
+    <tr>
+      <td id="exp4"></td>
+      <td><input id="ans4" type="text"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="채점" onclick="check()"></td>
+      <td id="result"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="다시" onclick="reset()"></td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+</html>
