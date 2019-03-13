@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style>
+		div { margin: 5px; padding: 5px; border: solid thin gray; }
+		#img2 { display: none; }
+	</style>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>
+		$(document).ready( function() {
+			//	fadeOut/fadeIn/fadeToggle 효과
+			$('#fadeOut').click(function() {
+					$('#img1').fadeOut(2000, function() {
+						$('#img2').fadeIn(100);
+					});
+			});
+			$('#fadeIn').click(function() {
+					$('#img2').fadeOut(2000, function() {
+						$('#img1').fadeIn(100);
+					});
+			});
+			$('#fadeToggle').click(function() {
+					$('#img1').fadeToggle(1000);
+			});
+		});
+	</script>
+</head>
+<body>
+	fadeOut/fadeIn/fadeToggle 효과
+	<button id="fadeOut"> fadeOut </button>
+	<button id="fadeIn"> fadeIn </button>
+	<button id="fadeToggle"> fadeToggle </button>
+	<div>
+		 <img id="img1" src="sunset.png">
+	 	 <img id="img2" src="snow.jpg">
+	</div>
+</body>
+</html>

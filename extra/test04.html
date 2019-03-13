@@ -40,10 +40,15 @@
       // $("span:eq(1)").css("border", "solid thick green");
       // $("p:lt(1)").css({'background-color':'purple', 'color': 'white'});
 
-      $("div:first-child").css("border-style", "hidden");
-      $("p:nth-child(odd)").css("border", "dashed thick red");
-      $("p:nth-child(3n+1)").css("border", "solid thick green");
-      $("*:only-child").css({'background-color':'purple', 'color': 'white'});
+      // $("div:first-child").css("border-style", "hidden");
+      // $("p:nth-child(odd)").css("border", "dashed thick red");
+      // $("p:nth-child(3n+1)").css("border", "solid thick green");
+      // $("*:only-child").css({'background-color':'purple', 'color': 'white'});
+
+      $("*:contains(2)").css("border-style", "hidden");
+      $("div:has(span)").css("border", "dashed thick red");
+      $("*:empty").css("border", "solid thick green");
+      $("#div0 *:parent").css({'background-color':'purple', 'color': 'white'});
     });
   </script>
 </head>
