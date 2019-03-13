@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>relative 배치 예제</title>
+  <style>
+    div {
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      border: 1px solid lightgray;
+      text-align: center;
+      color: white;
+      background: red;
+    }
+    #down:hover {
+      position: relative;
+      left: 20px;
+      top: 20px;
+      background: green;
+    }
+    #up:hover {
+      position: relative;
+      right: 20px;
+      bottom: 20px;
+      background: green;
+    }
+    #up2:hover {
+      position: relative;
+      left: 20px;
+      bottom: 20px;
+      background: green;
+    }
+  </style>
+</head>
+<body>
+  <h3>상대 배치, relative</h3>
+  <hr>
+  <div>T</div>
+  <div id="down">H</div>
+  <div>A</div>
+  <div>N</div>
+  <div id="up">K</div>
+  <div id="up2">S</div>
+</body>
+</html>
