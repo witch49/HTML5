@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ch09 9번</title>
+  <style>
+    div {
+      width: 300px;
+      height: 100px;
+      background-color: lightblue;
+      border: "1px solid green";
+    }
+  </style>
+
+  <script>
+    var explain;
+
+    function loaded() {
+      explain = document.getElementById("exp");
+      var arr = document.getElementsByTagName("li");
+      for (i = 0; i < arr.length; i++) {
+        arr[i].addEventListener("mouseover", over, false);
+        arr[i].addEventListener("mouseout", hide, false);
+      }
+    }
+
+    function over(e) {
+      if (e.target.id == "li_0") {
+        explain.innerHTML = "빨간자전거를 타고 서울, 대전, 대구, 부산 찍고, 목포, 인천을 거쳐 달린다.";
+        explain.style.left = e.clientX + "px";
+        explain.style.top = e.clientY + "px";
+        explain.style.visibility = "visible";
+      } else if (e.target.id == "li_1") {
+        explain.innerHTML = "내가 읽고 싶었던 책 버킷리스트 목록에 있는 100권을 읽는다.";
+        explain.style.left = e.clientX + "px";
+        explain.style.top = e.clientY + "px";
+        explain.style.visibility = "visible";
+      } else if (e.target.id == "li_2") {
+        explain.innerHTML = "철인 3종 경기는 수영, 사이클, 달리기로 이루어져 있으며 ~~.";
+        explain.style.left = e.clientX + "px";
+        explain.style.top = e.clientY + "px";
+        explain.style.visibility = "visible";
+      } else {
+        explain.innerHTML = "자바스크립트를 정복하기 위해 매일매일 코딩하고 결과물을 GitHub에 올렸다.";
+        explain.style.left = e.clientX + "px";
+        explain.style.top = e.clientY + "px";
+        explain.style.visibility = "visible";
+      }
+    }
+
+    function hide() {
+      explain.style.visibility = "hidden";
+    }
+  </script>
+</head>
+
+<body onload="loaded()">
+  <h3>아이템을 클릭하면 1.3배 크기로</h3>
+  <hr>
+  <p>여름 방학 때 하고 싶은 것들</p>
+  <ul>
+    <li id="li_0">자전거로 대한민국 일주</li>
+    <li id="li_1">책 100권 읽기</li>
+    <li id="li_2">철인 3종 경기 준비</li>
+    <li id="li_3">자바스크립트 정복</li>
+  </ul>
+  <div id="exp" style="position:absolute"></div>
+</body>
+
+</html>
