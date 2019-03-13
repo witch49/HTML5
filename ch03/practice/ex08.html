@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>데이터 목록을 가진 텍스트 입력</title>
+</head>
+
+<body>
+  <h3>가보고 싶은 곳</h3>
+  <hr>
+  <form>
+    <table style="text-align:center">
+      <tr>
+        <td>나 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 라</td>
+        <td>
+          <input type="text" list="countries">
+          <datalist id="countries">
+            <option value="가나"></option>
+            <option value="스위스"></option>
+            <option value="브라질"></option>
+          </datalist>
+        </td>
+      </tr>
+      <tr>
+        <td>보고싶은 것</td>
+        <td>
+          <input type="text" list="what">
+          <datalist id="what">
+            <option value="산"></option>
+            <option value="바다"></option>
+            <option value="도시"></option>
+          </datalist>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>
